@@ -1,0 +1,5 @@
+#!/bin/sh
+sed -e 's/ //g; s/../\\x&/g' |
+while read -r line || [[ -n "$line" ]]; do
+	printf "$line"
+done
